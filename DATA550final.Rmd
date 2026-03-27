@@ -1,0 +1,84 @@
+---
+title: "DATA 550 Midterm"
+author: "Sophia Choudhri" 
+output: html_document
+date: "2026-02-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  comment = NA
+
+)
+
+
+library(tidyverse)
+library(knitr)
+library(labelled)
+library(gt)
+```
+
+
+```{r, include=FALSE}
+here::i_am("DATA550final.Rmd")
+
+data <- readRDS(
+  file = here::here("output/clean_data.rds"))
+```
+
+## Introduction 
+This data set is a synthetic dataset looking at deaths in and recorded causes of deaths across the United States, India, Germany, Japan, Nigeria, Russia, Pakistan, China, Brazil, and the United Kingdom. The variables in the dataset are year, country, causes of death, number of deaths, and mortality rate per 1000. 
+
+### Analysis Goals 
+
+1. Summarize the number of deaths per country 
+2. Summarize the most common death by country 
+3. Visualize the number of deaths per cause of death 
+
+
+### Table 1 
+
+
+```{r}
+table1 <- readRDS(deaths_country, 
+        file = here::here("output/table1.rds"))
+
+table1
+```
+
+
+
+
+Table 1 shows the total number of deaths recorded in each country. 
+
+### Table 2
+
+```{r}
+table2 <- readRDS(common_cause, 
+        file = here::here("output/table2.rds"))
+
+table2
+```
+
+
+Table 2 shows the most common cause of death in each country. 
+
+### Figure 
+
+```{r, plot-data}
+#| fig.align = "center",
+#| out.width = "600px"
+knitr::include_graphics(
+  here::here("output/graph1.png")
+)
+```
+
+
+
+Figure 1 shows the number of people who have died from the various causes of death.
+
+
+
