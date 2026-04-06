@@ -14,5 +14,10 @@ output/table2.rds: code/02_make_table.R output/clean_data.rds
 output/graph1.png: code/03_make_graph.R output/clean_data.rds
 	Rscript code/03_make_graph.R
 
+PHONY:
 clean:
 	rm -f output/*.rds output/*.png report.html
+	
+PHONY:
+install: 
+	Rscript -e "renv::restore(prompt = FALSE)"
