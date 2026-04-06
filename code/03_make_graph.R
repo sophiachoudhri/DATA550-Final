@@ -1,6 +1,10 @@
-here::i_am("code/03_make_scatter.R")
+here::i_am("code/03_make_graph.R")
 
-graph1 <- ggplot(data, aes(x = reorder(Cause_of_Death, Number_of_Deaths),
+library(readr)
+library(here)
+library(ggplot2)
+
+graph1 <- ggplot(df, aes(x = reorder(Cause_of_Death, Number_of_Deaths),
                            y = Number_of_Deaths)) +
   geom_col() +
   coord_flip() +

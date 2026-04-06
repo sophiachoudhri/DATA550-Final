@@ -4,7 +4,7 @@ library(dplyr)
 library(gt)
 library(here)
 
-deaths_country <- data |>
+deaths_country <- df |>
   group_by(Country) |>
   summarise(
     total_deaths = sum(Number_of_Deaths, na.rm = TRUE)
