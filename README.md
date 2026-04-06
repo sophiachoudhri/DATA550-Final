@@ -56,5 +56,12 @@ The project is organized into modular scripts, each responsible for a specific s
 
 To generate the final report (`DATA550final.html`), navigate to the project directory and run:
 
-```bash
-make
+
+make DATA550final.html
+
+
+## To Use Install Renv
+
+To restore packages, navigate to the terminal and run 
+
+make install 
