@@ -42,12 +42,8 @@ The project is organized into modular scripts, each responsible for a specific s
 - generate first visualization
 - save figure to `output/graph1.png`
 
-`code/04_make_graph.R`
-- read cleaned data from `output/clean_data.rds`
-- generate second visualization
-- save figure to `output/graph2.png`
 
-`code/05_render_report.R`
+`code/04_render_report.R`
 - render `DATA550final.Rmd`
 - save compiled report as `report.html`
 
