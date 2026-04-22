@@ -1,6 +1,10 @@
 here::i_am("code/02_make_table.R")
 
 library(gt)
+library(dplyr)
+
+
+df <- readRDS(here::here("output/clean_data.rds"))
 
 common_cause <- df |>
   group_by(Country, Cause_of_Death) |>

@@ -65,3 +65,18 @@ make DATA550final.html
 To restore packages, navigate to the terminal and run 
 
 make install 
+
+## To use Docker 
+ 
+To build the image, run 
+
+  docker build -t final5 .
+  
+To run the image at the command line, run
+
+  docker run -v "$(pwd)/report:/home/rstudio/project/report" final5
+  
+To run it using make, run 
+
+  report/DATA550final.html
+ 

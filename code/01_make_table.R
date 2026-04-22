@@ -4,6 +4,8 @@ library(dplyr)
 library(gt)
 library(here)
 
+df <- readRDS(here::here("output/clean_data.rds"))
+
 deaths_country <- df |>
   group_by(Country) |>
   summarise(
