@@ -52,6 +52,8 @@ The project is organized into modular scripts, each responsible for a specific s
 - display formatted tables and figures
 - produce final report
 
+
+
 ## How to Generate the Final Report
 
 To generate the final report (`DATA550final.html`), navigate to the project directory and run:
@@ -60,23 +62,33 @@ To generate the final report (`DATA550final.html`), navigate to the project dire
 make DATA550final.html
 
 
-## To Use Install Renv
+
+
+## This project uses renv to manage R package dependencies: to use Install Renv
 
 To restore packages, navigate to the terminal and run 
 
 make install 
 
-## To use Docker 
+
+
+## To use Docker
  
 To build the image, run 
 
   docker build -t final5 .
   
-To run the image at the command line, run
+  
+  
+To run the image using make, run 
+
+  make report/DATA550final.html
+  
+  
+  
+To run the container directly at the command line, run
 
   docker run -v "$(pwd)/report:/home/rstudio/project/report" final5
   
-To run it using make, run 
 
-  make report/DATA550final.html
  
