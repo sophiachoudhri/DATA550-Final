@@ -3,6 +3,9 @@ here::i_am("code/03_make_graph.R")
 library(readr)
 library(here)
 library(ggplot2)
+library(dplyr)
+
+df <- readRDS(here::here("output/clean_data.rds"))
 
 graph1 <- ggplot(df, aes(x = reorder(Cause_of_Death, Number_of_Deaths),
                            y = Number_of_Deaths)) +

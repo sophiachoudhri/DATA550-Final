@@ -78,5 +78,5 @@ To run the image at the command line, run
   
 To run it using make, run 
 
-  report/DATA550final.html
+  make report/DATA550final.html
  
