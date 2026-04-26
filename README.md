@@ -75,11 +75,6 @@ make install
 
 ## To use Docker
  
-To build the image, run 
-
-  docker build -t final5 .
-  
-  
   
 To run the image using make, run 
 

@@ -24,14 +24,7 @@ PHONY:
 install: 
 	Rscript -e "renv::restore(prompt = FALSE)"
 	
-# For docker: 
-
-PROJECTFILES = DATA550final.Rmd code/data.R code/01_make_table.R code/02_make_table.R code/03_make_graph.R code/04_render_report.R Makefile Dockerfile
-RENVFILES = renv.lock renv/activate.R renv/settings.json
-
-final5: Dockerfile $(PROJECTFILES) $(RENVFILES)
-	docker build -t final5 .
-	touch $@
+# For docker:
 
 report/DATA550final.html: final5
 	docker run -v "$$(pwd)/report:/home/rstudio/project/report" schoudhri/data550final:latest
