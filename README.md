@@ -1,6 +1,7 @@
 # DATA550 Final Project
 
-In this project, we build a fully reproducible data analysis pipeline using R, R Markdown, and a Makefile. The goal is to analyze a dataset of deaths and causes of death across countries, generate summary tables and figures, and produce a final report.
+In this project, we build a fully reproducible data analysis pipeline using R, R Markdown, and a Makefile. The goal is to analyze
+a dataset of deaths and causes of death across countries, generate summary tables and figures, and produce a final report.
 
 The workflow is designed so that all results can be reproduced from raw data using a single command.
 
@@ -88,7 +89,7 @@ To run the image using make, run
   
 To run the container directly at the command line, run
 
-  docker run -v "$(pwd)/report:/home/rstudio/project/report" final5
+  docker run -v "$(pwd)/report:/home/rstudio/project/report" schoudhri/data550final:latest
   
 
  

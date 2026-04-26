@@ -34,4 +34,4 @@ final5: Dockerfile $(PROJECTFILES) $(RENVFILES)
 	touch $@
 
 report/DATA550final.html: final5
-	docker run -v "$$(pwd)/report:/home/rstudio/project/report" final5
+	docker run -v "$$(pwd)/report:/home/rstudio/project/report" schoudhri/data550final:latest
